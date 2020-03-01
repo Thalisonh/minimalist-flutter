@@ -1,17 +1,7 @@
-# login_minimalist
+# login_minimalist_flutter
 
-A new Flutter project.
+Login minimalist using framework flutter.
 
-## Getting Started
+Cretids design: https://www.behance.net/gallery/88214279/Sign-InSing-Up?tracking_source=search%7Clogin%20ui
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# minimalist-login-flutter
+![6f30cb88214279 5dcf3fff0b4f0](https://user-images.githubusercontent.com/54786785/75627922-397d2d80-5bb3-11ea-8723-5e1fa66190de.png)

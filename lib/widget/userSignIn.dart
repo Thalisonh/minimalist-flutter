@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:login_minimalist/pages/newuser.page.dart';
+import 'package:login_minimalist/pages/signin.page.dart';
 
-class FirstTime extends StatefulWidget {
-  @override
-  _FirstTimeState createState() => _FirstTimeState();
-}
-
-class _FirstTimeState extends State<FirstTime> {
+class UserSignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -18,7 +13,7 @@ class _FirstTimeState extends State<FirstTime> {
         child: Row(
           children: <Widget>[
             Text(
-              'Your first time?',
+              'Have we met before?',
               style: TextStyle(
                 fontSize: 12,
                 color: Colors.white70,
@@ -28,10 +23,10 @@ class _FirstTimeState extends State<FirstTime> {
               padding: EdgeInsets.all(0),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => NewUser()));
+                    MaterialPageRoute(builder: (context) => SignInPage()));
               },
               child: Text(
-                'Sing up',
+                'Sign in',
                 style: TextStyle(
                   fontSize: 12,
                   color: Colors.white,

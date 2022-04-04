@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:login_minimalist/pages/login.page.dart';
+import 'package:login_minimalist/pages/signup.page.dart';
 
-class UserOld extends StatelessWidget {
+class UserSignUp extends StatefulWidget {
+  @override
+  _UserSignUpState createState() => _UserSignUpState();
+}
+
+class _UserSignUpState extends State<UserSignUp> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -13,7 +18,7 @@ class UserOld extends StatelessWidget {
         child: Row(
           children: <Widget>[
             Text(
-              'Have we met before?',
+              'Your first time?',
               style: TextStyle(
                 fontSize: 12,
                 color: Colors.white70,
@@ -23,10 +28,10 @@ class UserOld extends StatelessWidget {
               padding: EdgeInsets.all(0),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LoginPage()));
+                    MaterialPageRoute(builder: (context) => SignUpPage()));
               },
               child: Text(
-                'Sing in',
+                'Sign up',
                 style: TextStyle(
                   fontSize: 12,
                   color: Colors.white,

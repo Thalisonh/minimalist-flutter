@@ -1,11 +1,16 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
-class ButtonNewUser extends StatefulWidget {
+class SubmitButton extends StatefulWidget {
+  final Function onPressed;
+  SubmitButton(this.onPressed);
+
   @override
-  _ButtonNewUserState createState() => _ButtonNewUserState();
+  _SubmitButtonState createState() => _SubmitButtonState();
 }
 
-class _ButtonNewUserState extends State<ButtonNewUser> {
+class _SubmitButtonState extends State<SubmitButton> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -26,11 +31,11 @@ class _ButtonNewUserState extends State<ButtonNewUser> {
               ),
             ),
           ],
-            color: Colors.white, borderRadius: BorderRadius.circular(30)),
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(30),
+        ),
         child: FlatButton(
-          onPressed: (){
-            Navigator.pop(context);
-          },
+          onPressed: widget.onPressed,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[

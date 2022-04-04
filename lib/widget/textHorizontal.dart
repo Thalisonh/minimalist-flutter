@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
-class TextLogin extends StatefulWidget {
+class HorizontalText extends StatefulWidget {
+  final String text;
+  HorizontalText(this.text);
+
   @override
-  _TextLoginState createState() => _TextLoginState();
+  _HorizontalTextState createState() => _HorizontalTextState();
 }
 
-class _TextLoginState extends State<TextLogin> {
+class _HorizontalTextState extends State<HorizontalText> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -21,7 +24,7 @@ class _TextLoginState extends State<TextLogin> {
             ),
             Center(
               child: Text(
-                'A world of possibility in an app',
+                widget.text,
                 style: TextStyle(
                   fontSize: 24,
                   color: Colors.white,

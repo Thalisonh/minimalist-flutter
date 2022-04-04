@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class InputEmail extends StatefulWidget {
+class SignUpName extends StatefulWidget {
   @override
-  _InputEmailState createState() => _InputEmailState();
+  _SignUpNameState createState() => _SignUpNameState();
 }
 
-class _InputEmailState extends State<InputEmail> {
+class _SignUpNameState extends State<SignUpName> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 50, left: 50, right: 50),
+      padding: const EdgeInsets.only(top: 20, left: 50, right: 50),
       child: Container(
         height: 60,
         width: MediaQuery.of(context).size.width,

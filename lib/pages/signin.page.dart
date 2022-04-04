@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:login_minimalist/widget/button.dart';
-import 'package:login_minimalist/widget/first.dart';
+import 'package:login_minimalist/widget/submitButton.dart';
+import 'package:login_minimalist/widget/userSignUp.dart';
 import 'package:login_minimalist/widget/forgot.dart';
-import 'package:login_minimalist/widget/inputEmail.dart';
+import 'package:login_minimalist/widget/email.dart';
 import 'package:login_minimalist/widget/password.dart';
-import 'package:login_minimalist/widget/textLogin.dart';
-import 'package:login_minimalist/widget/verticalText.dart';
+import 'package:login_minimalist/widget/textHorizontal.dart';
+import 'package:login_minimalist/widget/textVertical.dart';
 
-class LoginPage extends StatefulWidget {
+class SignInPage extends StatefulWidget {
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _SignInPageState createState() => _SignInPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,13 +28,13 @@ class _LoginPageState extends State<LoginPage> {
             Column(
               children: <Widget>[
                 Row(children: <Widget>[
-                  VerticalText(),
-                  TextLogin(),
+                  VerticalText('Sign in'),
+                  HorizontalText('A world of possibility in an app'),
                 ]),
-                InputEmail(),
+                Email(),
                 PasswordInput(),
-                ButtonLogin(),
-                FirstTime(),
+                SubmitButton((){}),
+                UserSignUp(),
               ],
             ),
           ],

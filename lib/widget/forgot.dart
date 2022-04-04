@@ -21,9 +21,7 @@ class _ForgotState extends State<Forgot> {
           onTap: widget.onPressed,
           child: Text(
             'Forgot Password?',
-            style: TextStyle(
-              color: Colors.white,
-            ),
+            style: TextStyle(color: Colors.white),
           ),
         ),
       ),

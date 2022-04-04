@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:login_minimalist/widget/submitButton.dart';
-import 'package:login_minimalist/widget/userSignInUp.dart';
-import 'package:login_minimalist/widget/forgot.dart';
-import 'package:login_minimalist/widget/email.dart';
-import 'package:login_minimalist/widget/password.dart';
-import 'package:login_minimalist/widget/textHorizontal.dart';
-import 'package:login_minimalist/widget/textVertical.dart';
+
+import '../widget/submitButton.dart';
+import '../widget/userSignInUp.dart';
+import '../widget/forgot.dart';
+import '../widget/email.dart';
+import '../widget/password.dart';
+import '../widget/textHorizontal.dart';
+import '../widget/textVertical.dart';
 
 import 'signup.page.dart';
 
@@ -31,7 +32,7 @@ class _SignInPageState extends State<SignInPage> {
               children: <Widget>[
                 Row(children: <Widget>[
                   VerticalText('Sign in'),
-                  HorizontalText('A world of possibility in an app'),
+                  HorizontalText('A world of possibility in an app')
                 ]),
                 Email(),
                 PasswordInput(),
@@ -40,8 +41,10 @@ class _SignInPageState extends State<SignInPage> {
                 UserSignInUp(
                   'Your first time?',
                   'Sign up',
-                  () => Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => SignUpPage())),
+                  () => Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => SignUpPage()),
+                  ),
                 ),
               ],
             ),

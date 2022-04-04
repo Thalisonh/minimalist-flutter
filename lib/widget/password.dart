@@ -14,16 +14,12 @@ class _PasswordInputState extends State<PasswordInput> {
         height: 60,
         width: MediaQuery.of(context).size.width,
         child: TextField(
-          style: TextStyle(
-            color: Colors.white,
-          ),
+          style: TextStyle(color: Colors.white),
           obscureText: true,
           decoration: InputDecoration(
             border: InputBorder.none,
             labelText: 'Password',
-            labelStyle: TextStyle(
-              color: Colors.white70,
-            ),
+            labelStyle: TextStyle(color: Colors.white70),
           ),
         ),
       ),

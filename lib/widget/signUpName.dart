@@ -21,9 +21,7 @@ class _SignUpNameState extends State<SignUpName> {
             border: InputBorder.none,
             fillColor: Colors.lightBlueAccent,
             labelText: 'Name',
-            labelStyle: TextStyle(
-              color: Colors.white70,
-            ),
+            labelStyle: TextStyle(color: Colors.white70),
           ),
         ),
       ),

@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 class SubmitButton extends StatefulWidget {
@@ -28,27 +26,21 @@ class _SubmitButtonState extends State<SubmitButton> {
               offset: Offset(2, 2))
         ], borderRadius: BorderRadius.circular(30)),
         */
-        child: RawMaterialButton(
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-          fillColor: Colors.white,
-          onPressed: widget.onPressed,
-          padding: EdgeInsets.all(10),
-          child: Row(
+      child: RawMaterialButton(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+        fillColor: Colors.white,
+        onPressed: widget.onPressed,
+        padding: EdgeInsets.all(10),
+        child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Text('OK'),
-              Icon(Icons.arrow_right_alt),
-
-            ],
-          ),
-          textStyle: TextStyle(
-            color: Colors.lightBlueAccent,
-            fontSize: 14,
-            fontWeight: FontWeight.w700,
-          ),
-          elevation: 5,
+            children: <Widget>[Text('OK'), Icon(Icons.arrow_right_alt)]),
+        textStyle: TextStyle(
+          color: Colors.lightBlueAccent,
+          fontSize: 14,
+          fontWeight: FontWeight.w700,
         ),
+        elevation: 5,
+      ),
       //),
     );
   }

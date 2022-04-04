@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:login_minimalist/widget/submitButton.dart';
-import 'package:login_minimalist/widget/email.dart';
-import 'package:login_minimalist/widget/signUpName.dart';
-import 'package:login_minimalist/widget/password.dart';
-import 'package:login_minimalist/widget/textVertical.dart';
-import 'package:login_minimalist/widget/textHorizontal.dart';
-import 'package:login_minimalist/widget/userSignInUp.dart';
+
+import '../widget/submitButton.dart';
+import '../widget/email.dart';
+import '../widget/signUpName.dart';
+import '../widget/password.dart';
+import '../widget/textVertical.dart';
+import '../widget/textHorizontal.dart';
+import '../widget/userSignInUp.dart';
 
 import 'signin.page.dart';
 
@@ -39,10 +40,11 @@ class _SignUpPageState extends State<SignUpPage> {
                 SubmitButton(() => Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => SignInPage()))),
                 UserSignInUp(
-                    'Have we met before?',
-                    'Sign in',
-                    () => Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => SignInPage()))),
+                  'Have we met before?',
+                  'Sign in',
+                  () => Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => SignInPage())),
+                ),
               ],
             ),
           ],

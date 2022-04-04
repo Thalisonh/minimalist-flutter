@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:login_minimalist/pages/signin.page.dart';
 
 class UserSignInUp extends StatelessWidget {
   final String infoText;
   final String onTapText;
   final Function onTap;
+
   UserSignInUp(this.infoText, this.onTapText, this.onTap);
 
   @override
@@ -15,12 +15,9 @@ class UserSignInUp extends StatelessWidget {
         children: <Widget>[
           Text(
             this.infoText,
-            style: TextStyle(
-              fontSize: 12,
-              color: Colors.white70,
-            ),
+            style: TextStyle(fontSize: 12, color: Colors.white70),
           ),
-          Padding(padding: EdgeInsets.only(left: 5),),
+          Padding(padding: EdgeInsets.only(left: 5)),
           Material(
             color: Colors.transparent,
             child: InkWell(
@@ -28,7 +25,11 @@ class UserSignInUp extends StatelessWidget {
               onTap: this.onTap,
               child: Text(
                 this.onTapText,
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 12,
+                ),
               ),
             ),
           ),

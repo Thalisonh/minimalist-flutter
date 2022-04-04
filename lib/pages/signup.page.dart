@@ -5,7 +5,9 @@ import 'package:login_minimalist/widget/signUpName.dart';
 import 'package:login_minimalist/widget/password.dart';
 import 'package:login_minimalist/widget/textVertical.dart';
 import 'package:login_minimalist/widget/textHorizontal.dart';
-import 'package:login_minimalist/widget/userSignIn.dart';
+import 'package:login_minimalist/widget/userSignInUp.dart';
+
+import 'signin.page.dart';
 
 class SignUpPage extends StatefulWidget {
   @override
@@ -34,11 +36,13 @@ class _SignUpPageState extends State<SignUpPage> {
                 SignUpName(),
                 Email(),
                 PasswordInput(),
-                SubmitButton(() {
-                  Navigator.pop(context);
-                  print("test");
-                }),
-                UserSignIn(),
+                SubmitButton(() => Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => SignInPage()))),
+                UserSignInUp(
+                    'Have we met before?',
+                    'Sign in',
+                    () => Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => SignInPage()))),
               ],
             ),
           ],

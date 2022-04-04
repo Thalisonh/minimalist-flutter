@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:login_minimalist/widget/submitButton.dart';
-import 'package:login_minimalist/widget/userSignUp.dart';
+import 'package:login_minimalist/widget/userSignInUp.dart';
 import 'package:login_minimalist/widget/forgot.dart';
 import 'package:login_minimalist/widget/email.dart';
 import 'package:login_minimalist/widget/password.dart';
 import 'package:login_minimalist/widget/textHorizontal.dart';
 import 'package:login_minimalist/widget/textVertical.dart';
+
+import 'signup.page.dart';
 
 class SignInPage extends StatefulWidget {
   @override
@@ -33,8 +35,14 @@ class _SignInPageState extends State<SignInPage> {
                 ]),
                 Email(),
                 PasswordInput(),
-                SubmitButton((){}),
-                UserSignUp(),
+                Forgot(() {}),
+                SubmitButton(() {}),
+                UserSignInUp(
+                  'Your first time?',
+                  'Sign up',
+                  () => Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => SignUpPage())),
+                ),
               ],
             ),
           ],
@@ -43,5 +51,3 @@ class _SignInPageState extends State<SignInPage> {
     );
   }
 }
-
-

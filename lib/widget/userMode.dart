@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class UserSignInUp extends StatelessWidget {
+class UserMode extends StatelessWidget {
   final String infoText;
   final String onTapText;
   final Function onTap;
 
-  UserSignInUp(this.infoText, this.onTapText, this.onTap);
+  UserMode(this.infoText, this.onTapText, this.onTap);
 
   @override
   Widget build(BuildContext context) {

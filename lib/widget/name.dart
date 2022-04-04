@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SignUpName extends StatefulWidget {
+class Name extends StatefulWidget {
   @override
-  _SignUpNameState createState() => _SignUpNameState();
+  _NameState createState() => _NameState();
 }
 
-class _SignUpNameState extends State<SignUpName> {
+class _NameState extends State<Name> {
   @override
   Widget build(BuildContext context) {
     return Padding(

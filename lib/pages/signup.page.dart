@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../widget/submitButton.dart';
 import '../widget/email.dart';
-import '../widget/signUpName.dart';
+import '../widget/name.dart';
 import '../widget/password.dart';
 import '../widget/textVertical.dart';
 import '../widget/textHorizontal.dart';
-import '../widget/userSignInUp.dart';
+import '../widget/userMode.dart';
 
 import 'signin.page.dart';
 
@@ -34,12 +34,12 @@ class _SignUpPageState extends State<SignUpPage> {
                   VerticalText('Sign up'),
                   HorizontalText('We can start something new'),
                 ]),
-                SignUpName(),
+                Name(),
                 Email(),
                 PasswordInput(),
                 SubmitButton(() => Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => SignInPage()))),
-                UserSignInUp(
+                UserMode(
                   'Have we met before?',
                   'Sign in',
                   () => Navigator.pushReplacement(context,

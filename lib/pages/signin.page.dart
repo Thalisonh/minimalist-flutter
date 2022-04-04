@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widget/submitButton.dart';
-import '../widget/userSignInUp.dart';
+import '../widget/userMode.dart';
 import '../widget/forgot.dart';
 import '../widget/email.dart';
 import '../widget/password.dart';
@@ -38,7 +38,7 @@ class _SignInPageState extends State<SignInPage> {
                 PasswordInput(),
                 Forgot(() {}),
                 SubmitButton(() {}),
-                UserSignInUp(
+                UserMode(
                   'Your first time?',
                   'Sign up',
                   () => Navigator.pushReplacement(

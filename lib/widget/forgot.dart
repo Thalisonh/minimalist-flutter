@@ -18,7 +18,7 @@ class _ForgotState extends State<Forgot> {
         color: Colors.transparent,
         child: InkWell(
           borderRadius: BorderRadius.circular(2),
-          onTap: widget.onPressed,
+          onTap: widget.onPressed as void Function()?,
           child: Text(
             'Forgot Password?',
             style: TextStyle(color: Colors.white),

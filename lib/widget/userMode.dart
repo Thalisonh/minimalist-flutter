@@ -22,7 +22,7 @@ class UserMode extends StatelessWidget {
             color: Colors.transparent,
             child: InkWell(
               borderRadius: BorderRadius.circular(2),
-              onTap: this.onTap,
+              onTap: this.onTap as void Function()?,
               child: Text(
                 this.onTapText,
                 style: TextStyle(

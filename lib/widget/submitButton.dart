@@ -29,7 +29,7 @@ class _SubmitButtonState extends State<SubmitButton> {
       child: RawMaterialButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
         fillColor: Colors.white,
-        onPressed: widget.onPressed,
+        onPressed: widget.onPressed as void Function()?,
         padding: EdgeInsets.all(10),
         child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

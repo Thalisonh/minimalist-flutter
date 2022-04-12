@@ -1,6 +1,6 @@
 # login_minimalist_flutter
 
-Login minimalist using framework flutter.
+Minimalist login using the flutter framework.
 
 Credits design: https://www.behance.net/gallery/88214279/Sign-InSing-Up?tracking_source=search%7Clogin%20ui
 

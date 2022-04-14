@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class VerticalText extends StatefulWidget {
-  final String text;
+  final String _text;
 
-  VerticalText(this.text);
+  VerticalText([this._text = ""]);
 
   @override
   _VerticalTextState createState() => _VerticalTextState();
@@ -17,7 +17,7 @@ class _VerticalTextState extends State<VerticalText> {
       child: RotatedBox(
         quarterTurns: -1,
         child: Text(
-          widget.text,
+          widget._text,
           style: TextStyle(
             color: Colors.white,
             fontSize: 38,

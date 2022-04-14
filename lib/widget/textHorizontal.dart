@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class HorizontalText extends StatefulWidget {
-  final String text;
+  final String _text;
 
-  HorizontalText(this.text);
+  HorizontalText([this._text = ""]);
 
   @override
   _HorizontalTextState createState() => _HorizontalTextState();
@@ -23,7 +23,7 @@ class _HorizontalTextState extends State<HorizontalText> {
             Container(height: 60),
             Center(
               child: Text(
-                widget.text,
+                widget._text,
                 style: TextStyle(fontSize: 24, color: Colors.white),
               ),
             ),

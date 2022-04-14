@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
-class UserMode extends StatelessWidget {
-  final String infoText;
-  final String onTapText;
-  final Function onTap;
+import 'inkWellStructure.dart';
 
-  UserMode(this.infoText, this.onTapText, this.onTap);
+class UserMode extends StatelessWidget {
+  final String _infoText;
+  final String _inkWellText;
+  final Function? _onPressed;
+
+  UserMode([this._infoText = "", this._inkWellText = "", this._onPressed]);
 
   @override
   Widget build(BuildContext context) {
@@ -14,24 +16,20 @@ class UserMode extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Text(
-            this.infoText,
+            this._infoText,
             style: TextStyle(fontSize: 12, color: Colors.white70),
           ),
           Padding(padding: EdgeInsets.only(left: 5)),
-          Material(
-            color: Colors.transparent,
-            child: InkWell(
-              borderRadius: BorderRadius.circular(2),
-              onTap: this.onTap as void Function()?,
-              child: Text(
-                this.onTapText,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 12,
-                ),
+          InkWellStructure(
+            Text(
+              this._inkWellText,
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 12,
               ),
             ),
+            _onPressed,
           ),
         ],
       ),

@@ -1,56 +1,42 @@
+
 import 'package:flutter/material.dart';
 
-import '../widget/submitButton.dart';
-import '../widget/userMode.dart';
-import '../widget/forgot.dart';
-import '../widget/email.dart';
-import '../widget/password.dart';
-import '../widget/textHorizontal.dart';
-import '../widget/textVertical.dart';
-
+import 'sign.page.dart';
 import 'signup.page.dart';
 
+import '../widget/namedInputField.dart';
+import '../widget/forgot.dart';
+import '../widget/userMode.dart';
+
 class SignInPage extends StatefulWidget {
+  const SignInPage({Key? key}) : super(key: key);
+
   @override
-  _SignInPageState createState() => _SignInPageState();
+  State<SignInPage> createState() => _SignInPageState();
 }
 
 class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-              colors: [Colors.blueGrey, Colors.lightBlueAccent]),
+    return SignPage(
+      verticalText: "Sign In",
+      horizontalText: "A world of possibility in an app",
+      beforeSubmit: [
+        Email(),
+        Password(),
+        Forgot(),
+      ],
+      afterSubmit: [
+        UserMode(
+          'Your first time?',
+          'Sign up',
+              () => Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => SignUpPage()),
+          ),
         ),
-        child: ListView(
-          children: <Widget>[
-            Column(
-              children: <Widget>[
-                Row(children: <Widget>[
-                  VerticalText('Sign in'),
-                  HorizontalText('A world of possibility in an app')
-                ]),
-                Email(),
-                PasswordInput(),
-                Forgot(() {}),
-                SubmitButton(() {}),
-                UserMode(
-                  'Your first time?',
-                  'Sign up',
-                  () => Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => SignUpPage()),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
+      ],
+      submitAction: () {},
     );
   }
 }

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Forgot extends StatefulWidget {
-  final Function onPressed;
+import 'inkWellStructure.dart';
 
-  Forgot(this.onPressed);
+class Forgot extends StatefulWidget {
+  final Function? _onPressed;
+
+  Forgot([this._onPressed]);
 
   @override
   _ForgotState createState() => _ForgotState();
@@ -14,16 +16,12 @@ class _ForgotState extends State<Forgot> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 20, right: 40, left: 190),
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          borderRadius: BorderRadius.circular(2),
-          onTap: widget.onPressed as void Function()?,
-          child: Text(
-            'Forgot Password?',
-            style: TextStyle(color: Colors.white),
-          ),
+      child: InkWellStructure(
+        Text(
+          'Forgot Password?',
+          style: TextStyle(color: Colors.white),
         ),
+        widget._onPressed,
       ),
     );
   }

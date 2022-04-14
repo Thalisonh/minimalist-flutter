@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class SubmitButton extends StatefulWidget {
-  final Function onPressed;
+  final Function? _onPressed;
 
-  SubmitButton(this.onPressed);
+  SubmitButton([this._onPressed]);
 
   @override
   _SubmitButtonState createState() => _SubmitButtonState();
@@ -29,7 +29,7 @@ class _SubmitButtonState extends State<SubmitButton> {
       child: RawMaterialButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
         fillColor: Colors.white,
-        onPressed: widget.onPressed as void Function()?,
+        onPressed: widget._onPressed as void Function()?,
         padding: EdgeInsets.all(10),
         child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

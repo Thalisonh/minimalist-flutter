@@ -6,8 +6,7 @@ class NamedInputField extends StatefulWidget {
   final TextInputType keyboard;
 
   NamedInputField(this.text,
-      {this.keyboard = TextInputType.text,
-      this.obscureText = false});
+      {this.keyboard = TextInputType.text, this.obscureText = false});
 
   @override
   _NamedInputFieldState createState() => _NamedInputFieldState();
@@ -41,7 +40,12 @@ class _NamedInputFieldState extends State<NamedInputField> {
             labelStyle: TextStyle(color: Colors.white70),
             suffix: widget.obscureText
                 ? IconButton(
-                    icon: Icon(obscureText ? Icons.remove_red_eye : Icons.remove_red_eye_outlined, color: Colors.white70,),
+                    icon: Icon(
+                      obscureText
+                          ? Icons.remove_red_eye
+                          : Icons.remove_red_eye_outlined,
+                      color: Colors.white70,
+                    ),
                     onPressed: () => setState(() {
                       obscureText = !obscureText;
                     }),
@@ -83,10 +87,7 @@ class Password extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return NamedInputField(
-      "Password",
-      keyboard: TextInputType.visiblePassword,
-      obscureText: true
-    );
+    return NamedInputField("Password",
+        keyboard: TextInputType.visiblePassword, obscureText: true);
   }
 }

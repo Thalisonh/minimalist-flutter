@@ -17,10 +17,7 @@ class _ForgotState extends State<Forgot> {
     return Padding(
       padding: const EdgeInsets.only(top: 20, right: 40, left: 190),
       child: InkWellStructure(
-        Text(
-          'Forgot Password?',
-          style: TextStyle(color: Colors.white),
-        ),
+        Text('Forgot Password?', style: TextStyle(color: Colors.white)),
         widget._onPressed,
       ),
     );

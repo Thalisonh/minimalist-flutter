@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'sign.page.dart';
@@ -29,14 +28,14 @@ class _SignUpPageState extends State<SignUpPage> {
         UserMode(
           'Have we met before?',
           'Sign in',
-              () => Navigator.pushReplacement(
+          () => Navigator.pushReplacement(
             context,
             MaterialPageRoute(builder: (context) => SignInPage()),
           ),
         ),
       ],
-      submitAction: () => Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: (context) => SignInPage())),
+      submitAction: () => Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => SignInPage())),
     );
   }
 }

@@ -33,7 +33,7 @@ class _SubmitButtonState extends State<SubmitButton> {
         padding: EdgeInsets.all(10),
         child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[Text('OK'), Icon(Icons.arrow_forward,)]),
+            children: <Widget>[Text('OK'), Icon(Icons.arrow_forward)]),
         textStyle: TextStyle(
           color: Colors.lightBlueAccent,
           fontSize: 18,

@@ -13,10 +13,13 @@ class SignPage extends StatefulWidget {
       Function? submitAction,
       List<Widget>? beforeSubmit,
       List<Widget>? afterSubmit}) {
-    _items.add(Row(children: [
-      VerticalText(verticalText),
-      HorizontalText(horizontalText)
-    ]));
+    _items.addAll([
+      Row(children: [
+        VerticalText(verticalText),
+        HorizontalText(horizontalText)
+      ]),
+      Padding(padding: EdgeInsets.only(top: 20))
+    ]);
     _items.addAll(beforeSubmit ?? []);
     _items.add(SubmitButton(submitAction));
     _items.addAll(afterSubmit ?? []);

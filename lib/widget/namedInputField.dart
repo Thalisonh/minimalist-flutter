@@ -1,30 +1,52 @@
 import 'package:flutter/material.dart';
 
 class NamedInputField extends StatefulWidget {
-  final String _text;
-  final bool _obscureText;
-  NamedInputField([this._text = "", this._obscureText = false]);
+  final String text;
+  final bool obscureText;
+  final TextInputType keyboard;
+
+  NamedInputField(this.text,
+      {this.keyboard = TextInputType.text,
+      this.obscureText = false});
 
   @override
   _NamedInputFieldState createState() => _NamedInputFieldState();
 }
 
 class _NamedInputFieldState extends State<NamedInputField> {
+  bool isNotSet = true;
+  late bool obscureText;
+
   @override
   Widget build(BuildContext context) {
+    if (isNotSet) {
+      obscureText = widget.obscureText;
+      isNotSet = false;
+    }
+
     return Padding(
       padding: const EdgeInsets.only(top: 20, left: 50, right: 50),
       child: Container(
         height: 60,
         width: MediaQuery.of(context).size.width,
         child: TextField(
-          obscureText: widget._obscureText,
+          keyboardType: widget.keyboard,
+          obscureText: obscureText,
+          cursorColor: Colors.white,
           style: TextStyle(color: Colors.white),
           decoration: InputDecoration(
             border: InputBorder.none,
             fillColor: Colors.lightBlueAccent,
-            labelText: widget._text,
+            labelText: widget.text,
             labelStyle: TextStyle(color: Colors.white70),
+            suffix: widget.obscureText
+                ? IconButton(
+                    icon: Icon(obscureText ? Icons.remove_red_eye : Icons.remove_red_eye_outlined, color: Colors.white70,),
+                    onPressed: () => setState(() {
+                      obscureText = !obscureText;
+                    }),
+                  )
+                : null,
           ),
         ),
       ),
@@ -32,13 +54,15 @@ class _NamedInputFieldState extends State<NamedInputField> {
   }
 }
 
-
 class Email extends StatelessWidget {
   const Email({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return NamedInputField("E-mail");
+    return NamedInputField(
+      "E-mail",
+      keyboard: TextInputType.emailAddress,
+    );
   }
 }
 
@@ -47,7 +71,10 @@ class Name extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return NamedInputField("Name");
+    return NamedInputField(
+      "Name",
+      keyboard: TextInputType.name,
+    );
   }
 }
 
@@ -56,6 +83,10 @@ class Password extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return NamedInputField("Password", true);
+    return NamedInputField(
+      "Password",
+      keyboard: TextInputType.visiblePassword,
+      obscureText: true
+    );
   }
 }

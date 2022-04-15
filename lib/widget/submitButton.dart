@@ -32,11 +32,11 @@ class _SubmitButtonState extends State<SubmitButton> {
         onPressed: widget._onPressed as void Function()?,
         padding: EdgeInsets.all(10),
         child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[Text('OK'), Icon(Icons.arrow_right_alt)]),
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[Text('OK'), Icon(Icons.arrow_forward,)]),
         textStyle: TextStyle(
           color: Colors.lightBlueAccent,
-          fontSize: 14,
+          fontSize: 18,
           fontWeight: FontWeight.w700,
         ),
         elevation: 5,

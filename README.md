@@ -1,12 +1,10 @@
 # login_minimalist_flutter
 
-Minimalist login using the flutter framework.
+Minimalist login using the Flutter framework.
 
-Credits design: https://www.behance.net/gallery/88214279/Sign-InSing-Up?tracking_source=search%7Clogin%20ui
+Credits design: https://www.behance.net/gallery/88214279/Sign-InSing-Up
 
-![6f30cb88214279 5dcf3fff0b4f0](https://user-images.githubusercontent.com/54786785/75627922-397d2d80-5bb3-11ea-8723-5e1fa66190de.png)
+[![6f30cb88214279 5dcf3fff0b4f0](https://user-images.githubusercontent.com/54786785/75627922-397d2d80-5bb3-11ea-8723-5e1fa66190de.png)](#)
 
-![minimalist2](https://user-images.githubusercontent.com/54786785/75636744-2775ac00-5c00-11ea-9421-ba1f32f2243f.jpeg)
-
-![minimalist1](https://user-images.githubusercontent.com/54786785/75636732-09a84700-5c00-11ea-99f4-300b8886d175.jpeg)
-
+[<img width="40%" src="https://user-images.githubusercontent.com/44443899/163495979-0bc2efd8-e20c-44cb-b1a9-23cccdefe895.png" align="left" />](#)
+[<img width="40%" src="https://user-images.githubusercontent.com/44443899/163495984-69c2747f-e1ad-4907-97d0-e290c7308988.png" align="right" />](#)

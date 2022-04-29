@@ -8,7 +8,10 @@ import '../widget/forgot.dart';
 import '../widget/userMode.dart';
 
 class SignInPage extends StatefulWidget {
-  const SignInPage({Key? key}) : super(key: key);
+  final TextEditingController emailController = new TextEditingController();
+  final TextEditingController passwordController = new TextEditingController();
+
+  SignInPage({Key? key}) : super(key: key);
 
   @override
   State<SignInPage> createState() => _SignInPageState();
@@ -21,8 +24,8 @@ class _SignInPageState extends State<SignInPage> {
       verticalText: "Sign In",
       horizontalText: "A world of possibility in an app",
       beforeSubmit: [
-        Email(),
-        Password(),
+        Email(controller: widget.emailController),
+        Password(controller: widget.passwordController),
         Forgot(),
       ],
       afterSubmit: [
@@ -35,7 +38,9 @@ class _SignInPageState extends State<SignInPage> {
           ),
         ),
       ],
-      submitAction: () {},
+      submitAction: () {
+        // use "widget.emailController.text" and "widget.passwordController.text"
+      },
     );
   }
 }

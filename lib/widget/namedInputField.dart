@@ -4,11 +4,11 @@ class NamedInputField extends StatefulWidget {
   final String text;
   final bool obscureText;
   final TextInputType keyboard;
-  final TextEditingController? textEditingController;
+  final TextEditingController? controller;
 
   NamedInputField(this.text,
       {this.keyboard = TextInputType.text,
-      this.textEditingController,
+      this.controller,
       this.obscureText = false});
 
   @override
@@ -32,7 +32,7 @@ class _NamedInputFieldState extends State<NamedInputField> {
         height: 60,
         width: MediaQuery.of(context).size.width,
         child: TextField(
-          controller: widget.textEditingController,
+          controller: widget.controller,
           keyboardType: widget.keyboard,
           obscureText: obscureText,
           cursorColor: Colors.white,
@@ -63,46 +63,46 @@ class _NamedInputFieldState extends State<NamedInputField> {
 }
 
 class Email extends StatelessWidget {
-  final TextEditingController? textEditingController;
+  final TextEditingController? controller;
 
-  const Email({this.textEditingController, Key? key}) : super(key: key);
+  const Email({this.controller, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return NamedInputField(
       "E-mail",
-      textEditingController: textEditingController,
+      controller: controller,
       keyboard: TextInputType.emailAddress,
     );
   }
 }
 
 class Name extends StatelessWidget {
-  final TextEditingController? textEditingController;
+  final TextEditingController? controller;
 
-  const Name({this.textEditingController, Key? key}) : super(key: key);
+  const Name({this.controller, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return NamedInputField(
       "Name",
       keyboard: TextInputType.name,
-      textEditingController: textEditingController,
+      controller: controller,
     );
   }
 }
 
 class Password extends StatelessWidget {
-  final TextEditingController? textEditingController;
+  final TextEditingController? controller;
 
-  const Password({this.textEditingController, Key? key}) : super(key: key);
+  const Password({this.controller, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return NamedInputField(
       "Password",
       keyboard: TextInputType.visiblePassword,
-      textEditingController: textEditingController,
+      controller: controller,
       obscureText: true,
     );
   }

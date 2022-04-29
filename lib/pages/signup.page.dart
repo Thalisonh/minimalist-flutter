@@ -7,7 +7,11 @@ import '../widget/namedInputField.dart';
 import '../widget/userMode.dart';
 
 class SignUpPage extends StatefulWidget {
-  const SignUpPage({Key? key}) : super(key: key);
+  final TextEditingController nameController = new TextEditingController();
+  final TextEditingController emailController = new TextEditingController();
+  final TextEditingController passwordController = new TextEditingController();
+
+  SignUpPage({Key? key}) : super(key: key);
 
   @override
   State<SignUpPage> createState() => _SignUpPageState();
@@ -20,9 +24,9 @@ class _SignUpPageState extends State<SignUpPage> {
       verticalText: "Sign Up",
       horizontalText: "We can start something new",
       beforeSubmit: [
-        Name(),
-        Email(),
-        Password(),
+        Name(controller: widget.nameController),
+        Email(controller: widget.emailController),
+        Password(controller: widget.passwordController),
       ],
       afterSubmit: [
         UserMode(
@@ -34,8 +38,11 @@ class _SignUpPageState extends State<SignUpPage> {
           ),
         ),
       ],
-      submitAction: () => Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => SignInPage())),
+      submitAction: () {
+        // use "widget.nameController.text", "widget.emailController.text" and "widget.passwordController.text"
+        return Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => SignInPage()));
+      },
     );
   }
 }

@@ -4,9 +4,12 @@ class NamedInputField extends StatefulWidget {
   final String text;
   final bool obscureText;
   final TextInputType keyboard;
+  final TextEditingController? textEditingController;
 
   NamedInputField(this.text,
-      {this.keyboard = TextInputType.text, this.obscureText = false});
+      {this.keyboard = TextInputType.text,
+      this.textEditingController,
+      this.obscureText = false});
 
   @override
   _NamedInputFieldState createState() => _NamedInputFieldState();
@@ -29,6 +32,7 @@ class _NamedInputFieldState extends State<NamedInputField> {
         height: 60,
         width: MediaQuery.of(context).size.width,
         child: TextField(
+          controller: widget.textEditingController,
           keyboardType: widget.keyboard,
           obscureText: obscureText,
           cursorColor: Colors.white,
@@ -59,35 +63,47 @@ class _NamedInputFieldState extends State<NamedInputField> {
 }
 
 class Email extends StatelessWidget {
-  const Email({Key? key}) : super(key: key);
+  final TextEditingController? textEditingController;
+
+  const Email({this.textEditingController, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return NamedInputField(
       "E-mail",
+      textEditingController: textEditingController,
       keyboard: TextInputType.emailAddress,
     );
   }
 }
 
 class Name extends StatelessWidget {
-  const Name({Key? key}) : super(key: key);
+  final TextEditingController? textEditingController;
+
+  const Name({this.textEditingController, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return NamedInputField(
       "Name",
       keyboard: TextInputType.name,
+      textEditingController: textEditingController,
     );
   }
 }
 
 class Password extends StatelessWidget {
-  const Password({Key? key}) : super(key: key);
+  final TextEditingController? textEditingController;
+
+  const Password({this.textEditingController, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return NamedInputField("Password",
-        keyboard: TextInputType.visiblePassword, obscureText: true);
+    return NamedInputField(
+      "Password",
+      keyboard: TextInputType.visiblePassword,
+      textEditingController: textEditingController,
+      obscureText: true,
+    );
   }
 }
